@@ -1,0 +1,18 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for p in post %}
+<p>{{ p.title }} : {{ p.dateCreation }}</p>
+<p> {{p.text|truncatechars:20}} </p>
+<a href="{{ p.get_absolute_url }}">Post url</a>
+{% endfor %}
+{% block title %}
+{% endblock %}
+<body>
+</html>
+

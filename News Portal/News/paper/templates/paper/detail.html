@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% load custom_filters %}
+
+{% block title %}
+<p>{{ news.title }} : {{ news.dateCreation|date:'d M Y' }}</p>
+<p> {{ news.text }} </p>
+{% endblock %}
+
+
